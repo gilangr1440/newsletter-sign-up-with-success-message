@@ -4,7 +4,12 @@ const errorText = document.querySelector(".main-content__error-text");
 const success = document.querySelector(".success-card");
 const closeButton = document.querySelector(".success-card__button");
 const emailText = document.querySelector(".success-card__desc_bold");
+const formContainer = document.querySelector(".main-content__form-container");
 const check = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+formContainer.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
 button.addEventListener("click", () => {
   if (input.value == "") {
